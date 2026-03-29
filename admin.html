@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة المنتجات | Product Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- الشريط الجانبي -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-boxes"></i>
+                <h2>مدير<span>المنتجات</span></h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-tab="dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>لوحة التحكم</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="products">
+                    <i class="fas fa-list-ul"></i>
+                    <span>المنتجات</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="add-product">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>إضافة منتج</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="categories">
+                    <i class="fas fa-tags"></i>
+                    <span>الفئات</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="main-content">
+            <!-- رأس الصفحة -->
+            <header class="content-header">
+                <div class="header-title">
+                    <h1 id="pageTitle">لوحة التحكم</h1>
+                    <p id="pageDesc">مرحباً بك في نظام إدارة المنتجات</p>
+                </div>
+                <div class="header-stats" id="headerStats">
+                    <div class="stat-badge">
+                        <i class="fas fa-box"></i>
+                        <span id="totalProducts">0</span>
+                        <small>منتج</small>
+                    </div>
+                </div>
+            </header>
+
+            <!-- محتوى الصفحات -->
+            <div id="pageContent">
+                <!-- الصفحات ستظهر هنا ديناميكياً -->
+            </div>
+        </main>
+    </div>
+
+    <!-- مودال التعديل -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> تعديل المنتج</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editName" placeholder="اسم المنتج">
+                <input type="number" id="editPrice" placeholder="السعر">
+                <select id="editCategory">
+                    <option value="">اختر الفئة</option>
+                </select>
+                <textarea id="editDesc" rows="3" placeholder="وصف المنتج"></textarea>
+                <input type="text" id="editImage" placeholder="رابط الصورة">
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="closeModalBtn">إلغاء</button>
+                <button class="btn-save" id="saveEditBtn">حفظ التغييرات</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
